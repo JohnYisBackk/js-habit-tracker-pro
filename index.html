@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Habit Tracker PRO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="bg-glow bg-glow-1"></div>
+      <div class="bg-glow bg-glow-2"></div>
+
+      <main class="tracker-main-card">
+        <!-- ============================================= -->
+        <!-- LEFT / MAIN PANEL -->
+        <!-- ============================================= -->
+
+        <section class="tracker-main-card">
+          <div class="tracker-top">
+            <div>
+              <p class="section-label">Daily Focus</p>
+              <h1>Habit Tracker PRO</h1>
+            </div>
+
+            <div class="top-actions">
+              <button class="ghost-btn" id="clearCompletedBtn">
+                Clear Completed
+              </button>
+            </div>
+          </div>
+
+          <p class="tracker-subtitle">
+            Build consistency with a clean daily tracker. Add habits, mark them
+            complete, and keep your routine organized in a premium dark
+            interface.
+          </p>
+
+          <!-- ============================================= -->
+          <!-- ADD HABIT FORM -->
+          <!-- ============================================= -->
+
+          <form class="habit-form" id="habitForm">
+            <div class="input-group">
+              <label for="habitInput" class="input-label">New Habit</label>
+              <input
+                type="text"
+                id="habitInput"
+                class="habit-input"
+                placeholder="Enter a new habit..."
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="habitCategory" class="input-label">Category</label>
+              <select id="habitCategory" class="habit-select">
+                <option value="Health">Health</option>
+                <option value="Productivity">Productivity</option>
+                <option value="Fitness">Fitness</option>
+                <option value="Mindset">Mindset</option>
+                <option value="Learning">Learning</option>
+              </select>
+            </div>
+
+            <button type="submit" class="primary-btn">Add Habit</button>
+          </form>
+
+          <!-- ============================================= -->
+          <!-- FILTER TABS -->
+          <!-- ============================================= -->
+          <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">All</button>
+            <button class="filter-tab" data-filter="active">Active</button>
+            <button class="filter-tab" data-filter="completed">
+              Completed
+            </button>
+          </div>
+
+          <!-- ============================================= -->
+          <!-- HABITS LIST -->
+          <!-- ============================================= -->
+          <div class="habits-list" id="habitsList">
+            <!-- Empty state -->
+            <div class="empty-state">
+              <h3>No habits yet</h3>
+              <p>Add your first habit to start building consistency.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- RIGHT / SIDEBAR -->
+        <!-- ============================================= -->
+        <aside class="tracker-sidebar">
+          <div class="sidebar-card">
+            <p class="section-label">Today</p>
+            <h2>Your Progress</h2>
+
+            <div class="progress-ring-wrap">
+              <div class="progress-ring">
+                <div class="progress-ring-inner">
+                  <strong id="progressPercent">0%</strong>
+                  <span>Completed</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="progress-stats">
+              <div class="stat-box">
+                <span class="stat-label">Total</span>
+                <strong id="totalHabits">0</strong>
+              </div>
+
+              <div class="stat-box">
+                <span class="stat-label">Completed</span>
+                <strong id="completedHabits">0</strong>
+              </div>
+
+              <div class="stat-box">
+                <span class="stat-label">Active</span>
+                <strong id="activeHabits">0</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <p class="section-label">Motivation</p>
+            <h2>Stay Consistent</h2>
+
+            <p class="motivation-text">
+              Small actions done daily create massive results over time. Focus
+              on progress, not perfection.
+            </p>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>
