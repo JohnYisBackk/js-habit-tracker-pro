@@ -7,7 +7,7 @@ Track your daily habits, stay consistent, and visualize your progress with a cle
 
 ## 🚀 Live Demo
 
-👉 
+👉 https://johnyisbackk.github.io/js-habit-tracker-pro/
 
 ---
 
